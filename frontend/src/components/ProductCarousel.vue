@@ -43,7 +43,19 @@ export default defineComponent({
 </script>
 
 <style>
-.carousel button {
-  background-color: #7952b3 !important;
+.carousel__next,
+.carousel__prev {
+  background-color: #7952b3;
+}
+
+.carousel__pagination {
+  padding: 0;
+}
+.carousel__pagination-button {
+  background-color: #d6cae8;
+}
+
+.carousel__pagination-button.carousel__pagination-button--active {
+  background-color: #7952b3;
 }
 </style>

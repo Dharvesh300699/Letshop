@@ -90,7 +90,7 @@ import { useStore } from "@/store"
 import { useRouter } from "vue-router"
 import Loader from "@/components/Loader.vue"
 import Message from "@/components/Message.vue"
-import { ORDER_CREATE_RESET } from "@/store/mutationTypes"
+import { ORDER_CREATE_RESET, PRODUCT_CREATE_RESET } from "@/store/mutationTypes"
 export default defineComponent({
   components: { Loader, Message },
   setup() {
@@ -137,7 +137,7 @@ export default defineComponent({
     watch(success, () => {
       if (success.value) {
         router.push({ name: "ProductList" })
-        store.commit(ORDER_CREATE_RESET)
+        store.commit(PRODUCT_CREATE_RESET)
       }
     })
 
